@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./bootstrap-4.0.0-dist (1)/css/bootstrap.css">
+    <link rel="stylesheet" href="./leon.css">
+    <title>نظام إدارة العملاء</title>
+
+    
+</head>
+
+<body>
+    <!-- العنوان الرئيسي -->
+    <div class="container m-4 text-center theTop mt-3">
+        <h2>Crud</h2>
+        <h3>Customer Debt System</h3>
+    </div>
+
+    <!-- إدخال العنوان -->
+    <div class="container text-center">
+        <input type="text" placeholder="Client Name" class="title w-100" id="titleOfClient">
+        <input  type="text" placeholder="Prosuct Name" class="title w-100" id="titleOfProduct">
+    </div>
+
+    <!-- إدخال البيانات المالية -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <input type="number" placeholder="price..." class="number1 w-100" id="price" onkeyup="TOOWTAL()">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <input type="number" onkeyup="TOOWTAL()"  placeholder="Interest...
+                " class="number1 w-100" id="FAWAYED">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <input type="number" onkeyup="TOOWTAL()"  placeholder="number of months... " class="number1 w-100" id="Number_OF_Mohth">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <button class="number1 w-100"id="Full_Total" ></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-dark mt-2 total"id="totalOfMonth" > </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- إدخال الكمية والتصنيف -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <button class="btn botn2 mt-3" id="ADD_Client">Add Customer</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <input type="text" onkeyup=" SEARCH(this.value)" placeholder="Search by Client Name.." class="number2 w-100" id="input_search">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <input type="text" onkeyup="Search(this.value)" placeholder="Search by Product Name .." class="number2 w-100" id="input_search_Product">
+            </div>
+        </div>
+    </div>
+
+    <!-- أزرار البحث -->
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-6 col-sm-12">
+                <button class="botn2 mt-2" id="searchbytitle">Search Client</button>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <button class="botn2 mt-2" id="searchcategory">Search Product</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- الجدول -->
+    <div class="container  m-auto d-block">
+        <table class="table ">
+            <thead class="">
+                <tr>
+                    <th>id</th>
+                    <th>Client</th>
+                    <th>Prouct title</th>
+                    <th>Price</th>
+                    <th>Interested</th>
+                    <th>Months</th>
+                    <th>Total Amount</th>
+                    <th>Monthly Payment </th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+
+    <script src="bootstrap-4.0.0-dist (1)/js/popper.min.js"></script>
+    <script src="./bootstrap-4.0.0-dist (1)/js/jquery-3.7.1.min.js"></script>
+    <script src="./jscript.js"></script>
+</body>
+
+</html>

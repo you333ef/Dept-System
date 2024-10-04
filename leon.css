@@ -1,0 +1,183 @@
+body {
+    background: linear-gradient(135deg, #1E1E1E, #121212);
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* العناوين الرئيسية */
+h2,
+h3 {
+    color: #bbbbbb;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* الحقول */
+.title,
+.number1,
+.number2 {
+    background-color: #2b2b2b;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input::placeholder {
+    color: #888;
+}
+
+/* زرار Create و الأزرار الأخرى */
+button, 
+#btnpapa, 
+.botn2, 
+.total {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    transition:  0.3s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover, 
+#btnpapa:hover, 
+.botn2:hover, 
+.total:hover {
+    background-color: #333333;
+    transform: scale(1.02);
+}
+
+/* أزرار البحث */
+.botn2 {
+    background-color: #2b2b2b;
+    padding: 10px;
+}
+
+/* الجدول */
+.table {
+    background-color: #222;
+    color: white;
+    margin-top: 20px;
+}
+
+.table thead th {
+    background-color: #333;
+    color: #cccccc;
+}
+
+.table tbody tr:hover {
+    background-color: #333;
+}
+
+.table td,
+.table th {
+    padding: 12px;
+}
+
+/* الأزرار في الجدول */
+button {
+    background-color: #2b2b2b;
+    padding: 6px 12px;
+}
+
+/* زرار Total */
+.total {
+    background-color: #2b2b2b;
+    padding: 12px;
+}
+
+/* تحسين شكل العمود الجانبي */
+.container.text-left {
+    padding-top: 20px;
+}
+#Full_Total::before{
+    content: 'Total Amount  :';
+
+}
+#totalOfMonth::before{
+    content: "Monthly Payment : ";
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+        margin-top: 30px;
+    }
+
+    /* إخفاء الـ head الخاص بالجدول */
+    thead {
+        display: none;
+    }
+
+    /* تنسيق كل صف بحيث يبقى عمودي */
+    tr {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #000 !important;
+    }
+
+    /* تنسيق الـ ID وغيره من العناصر كأنهم عنوان لكل صف */
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 50%;
+    }
+  
+}
+@media (max-width: 768px){
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+        margin-top: 30px;
+    }
+
+    /* إخفاء الـ head الخاص بالجدول */
+    thead {
+        display: none;
+    }
+
+    /* تنسيق كل صف بحيث يبقى عمودي */
+    tr {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #000 !important;
+    }
+
+    /* تنسيق الـ ID وغيره من العناصر كأنهم عنوان لكل صف */
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 50%;
+    }
+
+
+
+
+}
